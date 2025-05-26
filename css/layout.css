@@ -1,0 +1,19 @@
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-default);
+  font-family: "MyTupi", sans-serif;
+}
+
+/* Page Container */
+.container {
+  max-width: 1400px;
+  padding-left: 56px;
+  padding-right: 56px;
+  margin: 0 auto;
+}

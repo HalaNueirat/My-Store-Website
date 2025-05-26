@@ -1,0 +1,104 @@
+/* Top message bar */
+.top-message-bar {
+  background-color: var(--ui-bg-light);
+  padding: 2rem 0;
+  font-size: 0.91rem;
+  text-align: center;
+}
+
+.top-message-bar a {
+  color: var(--text-default);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Top navbar */
+#utility-nav {
+  background-color: var(--ui-bg-light-transparent);
+}
+#utility-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  list-style-type: none;
+  margin-right: 0.8rem;
+}
+#utility-nav li a {
+  display: block;
+  padding: 0.7rem 0;
+  color: var(--primary-blue);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+#utility-nav li a:hover {
+  color: var(--primary-red);
+}
+
+/* Main navigation row */
+.main-nav-row {
+  box-shadow: var(--shadow-primary);
+  border-bottom: 0.4rem solid var(--primary-red);
+}
+.main-nav-row .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* XNGAGE logo */
+.logo-link {
+  display: block;
+}
+.logo {
+  height: 30px;
+  margin-top: 0.2rem;
+}
+
+/* Main navigation bar*/
+#main-nav {
+  margin-left: 3.2rem;
+}
+#main-nav ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+#main-nav a {
+  display: block;
+  position: relative;
+  padding: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+  z-index: 1;
+}
+#main-nav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--ui-bg-light-transparent);
+  transition: width 0.3s;
+  z-index: -1;
+}
+#main-nav a:hover::before {
+  width: 100%;
+}
+
+/* Search box*/
+.search-box {
+  padding: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.search-box i {
+  margin-left: 0.5rem;
+}

@@ -1,0 +1,7 @@
+/* Custom Fonts */
+@font-face {
+  font-family: "MyTupi";
+  src: url("/assets/fonts/Mytupi.woff2") format("woff2"),
+       url("/assets/fonts/Mytupi.woff") format("woff"),
+       url("/assets/fonts/Mytupi.ttf") format("truetype");
+}
