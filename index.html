@@ -11,51 +11,111 @@
     />
   </head>
   <body>
+    <!-- Hidden checkbox toggle for opening and closing the mobile menu -->
+    <input type="checkbox" id="menu-toggle" hidden />
+
+    <!-- Website header -->
     <header>
       <!-- Top message bar -->
       <div class="top-message-bar">
-        <p class="container">
-          Cleaver-Brooks ClearFire&reg;-CE Condensing Boiler Named Most Valuable
-          Product of the Year by Industry Professionals.
-          <a href="#"
-            >&nbsp;Learn More <i class="fa-solid fa-arrow-right"></i
-          ></a>
-        </p>
+        <div class="container">
+          <p>
+            Cleaver-Brooks ClearFire&reg;-CE Condensing Boiler Named Most
+            Valuable Product of the Year by Industry Professionals.
+            <a href="#"
+              >&nbsp;Learn More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </p>
+        </div>
       </div>
-      <!-- Top navigation bar with links to Find a Rep and Parts Store -->
-      <div id="utility-nav">
-        <nav class="container" aria-label="Utility Navigation">
-          <ul>
-            <li>
-              <a href="#"><i class="fas fa-user-tie"></i> Find a Rep</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-shopping-cart"></i> Parts Store</a>
-            </li>
-          </ul>
-        </nav>
+
+      <!-- Utility navigation with links to Find a Rep and Parts Store -->
+      <div class="utility-nav-row">
+        <div class="container">
+          <nav id="utility-nav" aria-label="Utility Navigation">
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-user-tie"></i> <span>Find a Rep</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-shopping-cart"></i>
+                  <span>Parts Store</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <!-- website logo and Main navigation bar -->
+
+      <!-- Main navigation row: logo, menu icon, nav links, and search box -->
       <div class="main-nav-row">
         <div class="container">
+          <!-- menu icon -->
+          <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </label>
+          <!-- Website logo -->
           <a href="/" class="logo-link">
             <img src="assets/images/logo.svg" alt="Xngage Logo" class="logo" />
           </a>
+          <!-- Main navigation links -->
           <nav id="main-nav" aria-label="Main Navigation">
             <ul>
-              <li><a href="#">Solutions</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Rentals</a></li>
-              <li><a href="#">Industries</a></li>
-              <li><a href="#">Education & Training</a></li>
-              <li><a href="#">Company Info</a></li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-lightbulb"></i> <span>Solutions</span></a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-box"> </i><span>Products</span></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-truck"> </i><span>Rentals</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-industry"></i> <span>Industries</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chalkboard-teacher"></i>
+                  <span>Education & Training</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-building"></i> <span>Company Info</span></a
+                >
+              </li>
             </ul>
           </nav>
+          <!-- Search box -->
           <div class="search-box">
-            Search <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
       </div>
     </header>
+
+    <!-- Sidebar menu for mobile -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <!-- Website logo -->
+        <a href="/" class="logo-link">
+          <img src="assets/images/logo.svg" alt="Xngage Logo" class="logo" />
+        </a>
+        <!-- Close icon inside the sidebar -->
+        <label for="menu-toggle" class="close-icon" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </label>
+      </div>
+    </aside>
   </body>
 </html>
