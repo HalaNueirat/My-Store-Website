@@ -1,3 +1,289 @@
-@import url("./desktopHeader.css");
-@import url("./tabletHeader.css");
-@import url("./mobileHeader.css");
+/* === Desktop styles === */
+
+/* Top message bar */
+.top-message-bar {
+  background-color: var(--ui-bg-light);
+  padding: 2rem 0;
+  font-size: 0.91rem;
+  text-align: center;
+}
+.top-message-bar a {
+  color: var(--text-default);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Utility navbar */
+.utility-nav-row {
+  background-color: var(--ui-bg-light-transparent);
+}
+#utility-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  list-style-type: none;
+  margin-right: 0.8rem;
+}
+#utility-nav li a {
+  display: block;
+  padding: 0.7rem 0;
+  color: var(--primary-blue);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#utility-nav li a:hover {
+  color: var(--primary-red);
+}
+
+/* Main navigation row */
+.main-nav-row {
+  box-shadow: var(--shadow-primary);
+  border-bottom: 0.4rem solid var(--primary-red);
+}
+.main-nav-row .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+/* Menu  icon*/
+.main-nav-row .menu-icon {
+  display: none;
+}
+
+/* XNGAGE logo */
+.logo-link {
+  display: block;
+}
+.logo {
+  height: 30px;
+  margin-top: 0.2rem;
+}
+
+/* Main navigation bar*/
+#main-nav {
+  margin-left: 3.2rem;
+}
+#main-nav ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+#main-nav a {
+  display: block;
+  position: relative;
+  padding: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+  z-index: 1;
+}
+#main-nav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--ui-bg-light-transparent);
+  transition: width 0.3s;
+  z-index: -1;
+}
+#main-nav a:hover::before {
+  width: 100%;
+}
+
+/* Search box*/
+.search-box {
+  padding: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.search-box i {
+  margin-left: 0.5rem;
+}
+
+/* Hide logo and Close icon */
+.sidebar .close-icon,
+.sidebar-header img {
+  display: none;
+}
+
+/* Responsive adjustments for mid-sized desktops */
+@media (min-width: 1025px) and (max-width: 1329px) {
+  .top-message-bar {
+    font-size: 0.8rem;
+  }
+  #utility-nav ul {
+    font-size: 0.8rem;
+    gap: 1rem;
+  }
+  .logo {
+    height: 20px;
+  }
+  #main-nav {
+    margin-left: 1rem;
+  }
+  #main-nav ul {
+    gap: 0.2rem;
+  }
+  #main-nav a,
+  .search-box {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .search-box i {
+    margin-left: 0.2rem;
+  }
+}
+
+/* === Mobile and tablet styles === */
+@media (max-width: 1024px) {
+  /* Page Container */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Hide Navigation links */
+  #main-nav,
+  #utility-nav {
+    display: none;
+  }
+
+  /* Make .main-nav-row flexible */
+  .main-nav-row .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* Menu icon */
+  .main-nav-row .menu-icon {
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    display: block;
+  }
+
+  /* Change icon color */
+  .main-nav-row .menu-icon:hover,
+  .main-nav-row .search-box:hover,
+  .sidebar .close-icon:hover {
+    color: var(--primary-red);
+  }
+
+  /* Reduce logo height*/
+  .logo {
+    height: 28px;
+  }
+
+  /* Search box */
+  .search-box {
+    padding: 0;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+  }
+  .search-box > span {
+    display: none;
+  }
+  .search-box i {
+    margin-left: 0;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 89vw;
+    height: 100vh;
+    background-color: var(--text-inverse);
+    transform: translateX(-100%);
+    transition: display 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Show sidebar when menu is toggled */
+  #menu-toggle:checked ~ .sidebar {
+    transform: translateX(0);
+  }
+  /* Sidebar header with logo and close icon */
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 0.3rem solid var(--primary-red);
+  }
+  /* XNGAGE logo */
+  .sidebar-header img {
+    display: block;
+    height: 25px;
+  }
+  /* Close icon */
+  .sidebar .close-icon {
+    display: block;
+    font-size: 2rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0.5rem;
+  }
+
+  /* Show and position navs in sidebar*/
+  #menu-toggle:checked ~ header #utility-nav,
+  #menu-toggle:checked ~ header #main-nav {
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: 1001;
+    width: 89vw;
+    margin-left: 0;
+  }
+  #menu-toggle:checked ~ header #utility-nav {
+    top: 31rem;
+    bottom: 0;
+    background-color: var(--ui-bg-light-transparent);
+  }
+  #menu-toggle:checked ~ header #main-nav {
+    top: 5.5rem;
+  }
+
+  /* Nav list styling */
+  #menu-toggle:checked ~ header #utility-nav ul,
+  #menu-toggle:checked ~ header #main-nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    gap: 0;
+  }
+  #menu-toggle:checked ~ header #main-nav ul li {
+    border-bottom: 0.1rem solid var(--ui-bg-light);
+  }
+  #menu-toggle:checked ~ header #main-nav ul a,
+  #menu-toggle:checked ~ header #utility-nav ul a {
+    padding: 1.5rem;
+  }
+
+  /* Right arrow icon on main nav links */
+  #main-nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #main-nav ul li a::after {
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-size: 1rem;
+  }
+}
