@@ -57,7 +57,7 @@
   color: var(--text-default);
 }
 
-/* Tablets and small desktops adjustments */
+/* Responsive adjustments for tablets and small desktops */
 @media (min-width: 601px) and (max-width: 1024px) {
   .hero {
     height: 380px;
@@ -72,7 +72,7 @@
   }
 }
 
-/* Mobile adjustments */
+/* Responsive adjustments for mobile */
 @media (max-width: 600px) {
   .hero {
     height: 340px;
