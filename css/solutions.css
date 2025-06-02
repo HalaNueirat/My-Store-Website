@@ -4,7 +4,7 @@
 }
 
 /* Section Heading */
-#solutions h2 {
+.section-header {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2.5rem;
