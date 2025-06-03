@@ -55,19 +55,15 @@
 .cta-box::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../assets/images/flame.png");
-  background-size: cover;
-  background-position: center;
+  inset: 0;
+  background: url("../assets/images/flame.png") center/cover no-repeat;
   opacity: 0.1;
   z-index: 0;
 }
 
 /* Ensure text and button appear above background */
 .cta-content {
+  position: relative;
   z-index: 1;
 }
 
@@ -86,7 +82,7 @@
 
 /* CTA button */
 .cta-button {
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   gap: 5px;
   font-size: 0.9rem;
@@ -134,9 +130,6 @@
   }
   .company-description {
     flex-basis: 100%;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
   }
 
   /* Shrink heading and paragraph text size */

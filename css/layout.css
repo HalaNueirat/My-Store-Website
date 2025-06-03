@@ -17,3 +17,16 @@ body {
   padding-right: 56px;
   margin: 0 auto;
 }
+
+/* vertical spacing between sections */
+.section-spacing {
+  padding: 60px 0;
+}
+
+/* Adjust container padding for tablets and small screens */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

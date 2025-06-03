@@ -1,7 +1,4 @@
 /* === Solutions section styles === */
-#solutions {
-  padding: 60px 0;
-}
 
 /* Section Heading */
 .section-header {
@@ -21,7 +18,6 @@
 .solution-box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
 }
 
@@ -84,8 +80,6 @@ figure {
 }
 figure img {
   width: 100%;
-  max-width: 800px;
-  min-height: 300px;
   height: auto;
   display: block;
 }
@@ -105,21 +99,18 @@ figure img {
     flex-direction: column-reverse;
   }
 
+  /* Expand text content to full width */
+  .solution-content {
+    max-width: 100%;
+  }
+
   /* Ensure figure takes full width */
   figure {
     width: 100%;
-    max-width: 100%;
   }
 
   /* Adjust image size for smaller screens */
   figure img {
-    max-width: 100%;
     min-height: 200px;
-    height: auto;
-  }
-
-  /* Expand text content to full width */
-  .solution-content {
-    max-width: 100%;
   }
 }

@@ -87,16 +87,15 @@
 #main-nav a::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
+  inset: 0;
   background-color: var(--ui-bg-light-transparent);
-  transition: width 0.3s;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
   z-index: -1;
 }
 #main-nav a:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 /* Search box*/
@@ -141,12 +140,6 @@
 
 /* === Mobile and tablet styles === */
 @media (max-width: 1024px) {
-  /* Page Container */
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
   .utility-nav-row .container,
   .main-nav-row .container {
     padding: 0;
@@ -172,7 +165,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
     padding: 1rem;
   }
 
@@ -224,7 +216,6 @@
 
   /* Sidebar header with logo and close icon */
   .sidebar-header {
-    display: block;
     display: flex;
     justify-content: space-between;
     align-items: center;
