@@ -29,93 +29,550 @@
         </div>
       </div>
 
-      <!-- Utility navigation with links to Find a Rep and Parts Store -->
-      <div class="utility-nav-row">
+      <!-- Mobile header bar-->
+      <div class="mobile-header-bar">
         <div class="container">
-          <nav id="utility-nav" aria-label="Utility Navigation">
-            <ul>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-user-tie"></i> <span>Find a Rep</span></a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-shopping-cart"></i>
-                  <span>Parts Store</span></a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <!-- Main navigation row: logo, menu icon, nav links, and search box -->
-      <div class="main-nav-row">
-        <div class="container">
-          <!-- menu icon -->
+          <!-- Menu icon -->
           <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </label>
+
           <!-- Website logo -->
           <a href="/" class="logo-link">
             <img src="assets/images/logo.svg" alt="Xngage Logo" class="logo" />
           </a>
-          <!-- Main navigation links -->
-          <nav id="main-nav" aria-label="Main Navigation">
-            <ul>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-lightbulb"></i> <span>Solutions</span></a
-                >
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-box"> </i><span>Products</span></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-truck"> </i><span>Rentals</span></a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-industry"></i> <span>Industries</span></a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chalkboard-teacher"></i>
-                  <span>Education & Training</span></a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-building"></i> <span>Company Info</span></a
-                >
-              </li>
-            </ul>
-          </nav>
-          <!-- Search box -->
-          <div class="search-box">
-            <span>Search</span>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
+
+          <!-- Search icon -->
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
+
+      <!-- Sidebar navigation panel -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <!-- Website logo -->
+          <a href="/" class="logo-link">
+            <img src="assets/images/logo.svg" alt="Xngage Logo" class="logo" />
+          </a>
+          <!-- Close icon -->
+          <label for="menu-toggle" class="close-icon" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+          </label>
+        </div>
+        <!-- Utility navigation with links to Find a Rep and Parts Store -->
+        <div class="utility-nav-row">
+          <div class="container">
+            <nav id="utility-nav" aria-label="Utility Navigation">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-user-tie"></i> <span>Find a Rep</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-shopping-cart"></i>
+                    <span>Parts Store</span></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Main navigation row: logo, menu icon, nav links, and search box -->
+        <div class="main-nav-row">
+          <div class="container">
+            <!-- Website logo -->
+            <a href="/" class="logo-link">
+              <img
+                src="assets/images/logo.svg"
+                alt="Xngage Logo"
+                class="logo"
+              />
+            </a>
+            <!-- Main navigation links -->
+            <nav id="main-nav" aria-label="Main Navigation">
+              <ul>
+                <li>
+                  <a href="#solutions">Solutions</a>
+                </li>
+                <li>
+                  <a href="#products">Products</a>
+                </li>
+                <li>
+                  <a href="#">Rentals</a>
+                </li>
+                <li>
+                  <a href="#">Industries</a>
+                </li>
+                <li>
+                  <a href="#">Education & Training</a>
+                </li>
+                <li>
+                  <a href="#">Company Info</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Search box -->
+            <div class="search-box">
+              <span>Search</span>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+        </div>
+      </aside>
     </header>
 
-    <!-- Sidebar menu for mobile -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <!-- Website logo -->
-        <a href="/" class="logo-link">
-          <img src="assets/images/logo.svg" alt="Xngage Logo" class="logo" />
-        </a>
-        <!-- Close icon inside the sidebar -->
-        <label for="menu-toggle" class="close-icon" aria-label="Close menu">
-          <i class="fas fa-times"></i>
-        </label>
-      </div>
-    </aside>
+    <!-- Main content area -->
+    <main>
+      <!-- Hero section -->
+      <section class="hero">
+        <img
+          src="https://picsum.photos/id/1020/1920/400"
+          alt="Hero background"
+          class="hero-img"
+        />
+        <div class="hero-content">
+          <h1>
+            <span>Comprehensive</span>
+            Boiler Room Solutions
+          </h1>
+          <a href="#" class="btn-primary">Learn More</a>
+        </div>
+      </section>
+
+      <!-- Who we are section -->
+      <section class="who-we-are">
+        <div class="container">
+          <div class="company-description">
+            <h2>Who We Are</h2>
+            <div class="separator"></div>
+            <p>
+              Founded in 1929, Cleaver-Brooks is a complete boiler room
+              solutions provider that helps businesses run better every day. It
+              develops hot water and steam generation products aimed at
+              integrating and optimizing the total boiler/burner/control/stack
+              exhaust system to maximize energy efficiency and reliability while
+              minimizing emissions.
+            </p>
+          </div>
+          <aside class="cta-box">
+            <input type="checkbox" id="toggle-cta" hidden />
+            <label for="toggle-cta" class="cta-toggle-label">Find a Rep</label>
+            <div class="cta-content">
+              <p>
+                Our dedicated reps help you commission your system, obtain parts
+                and service, and provide product training.
+              </p>
+              <a href="#" class="cta-button"
+                ><i class="fa-solid fa-magnifying-glass"></i> Find a Rep Near
+                You</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+      <section class="video section-spacing">
+        <div class="container">
+          <div class="info-box">
+            <span class="brand"
+              >prom&#275;tha<sup class="tm">&trade;</sup></span
+            >
+            <h3>Boiler Room Intelligence at Your Fingertips</h3>
+            <p>
+              Ideal for any industry, Prometha offers users the ability to
+              remotely monitor boiler systems from anywhere, providing alerts
+              and actionable insights that help increase reliability,
+              efficiency, safety and sustainability in the boiler room.
+            </p>
+          </div>
+          <div class="video-container">
+            <video id="video" width="850" height="400">
+              <source
+                src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/GTYSdDW/lovatnet-lake-beautiful-nature-norway_bwetju08l__71e9932cda54a887a2da85d3f05d77dc__P360.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <button class="play-button" onclick="playVideo()">
+              <i class="fas fa-play play-icon"></i>
+            </button>
+            <button class="pause-button" onclick="pauseVideo()">
+              <i class="fas fa-pause pause-icon"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solutions Section -->
+      <section id="solutions" class="section-spacing">
+        <div class="container">
+          <header class="section-header">
+            <h2>Solutions</h2>
+          </header>
+          <div class="solutions-boxes-container">
+            <!-- Rental Solution -->
+            <article class="solution-box">
+              <div class="solution-content">
+                <h3><span>Ren</span>tals</h3>
+                <h4>We Provide. Nationwide.</h4>
+                <p>
+                  More than 1,500 CBRA representatives worldwide provide
+                  comprehensive, ongoing support—from commissioning your system,
+                  to providing parts and service after the sale, to product
+                  training.
+                </p>
+                <a href="#" class="learn-more">
+                  Learn More <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <figure>
+                <img
+                  src="assets/images/rental-boiler.png"
+                  alt="Cleaver Brooks Truck providing rental solutions"
+                  width="800"
+                  height="400"
+                />
+              </figure>
+            </article>
+            <!-- Emissions Solution -->
+            <article class="solution-box reverse">
+              <figure>
+                <img
+                  src="assets/images/emission-boiler.png"
+                  alt="Worker inspecting equipment for emission control"
+                  width="800"
+                  height="400"
+                />
+              </figure>
+              <div class="solution-content">
+                <h3><span>Cus</span>tom Solutions</h3>
+                <h4>Lower Emissions.</h4>
+                <p>
+                  Cleaver-Brooks works with customers to custom tailor solutions
+                  that help them be more environmentally friendly, decrease fuel
+                  costs, increase efficiency, and meet ever stringent
+                  guidelines.
+                </p>
+                <a href="#" class="learn-more">
+                  Learn More <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent News Section -->
+      <section class="recent-news section-spacing">
+        <div class="container">
+          <input type="checkbox" id="toggle-news" hidden />
+          <header class="section-header">
+            <h2>Recent News</h2>
+            <div class="view-all-wrapper">
+              <label
+                for="toggle-news"
+                class="view-label"
+                data-text="View Less News"
+              >
+                <span>View All News</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </label>
+            </div>
+          </header>
+
+          <div class="news-scroll-wrapper">
+            <button class="scroll-arrow scroll-left" aria-label="Scroll left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="cards-container">
+              <!-- Card 1 -->
+              <article class="news-card">
+                <figure>
+                  <img
+                    src="https://picsum.photos/seed/news1/400/250"
+                    alt="News image 1"
+                    width="400"
+                    height="250"
+                  />
+                </figure>
+                <div class="news-content">
+                  <h3>Boiler Technology Innovation</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus lacinia odio vitae vestibulum vestibulum. Cras
+                    venenatis euismod malesuada. Curabitur convallis justo a
+                    purus varius, ut congue metus facilisis. Vestibulum sed
+                    lorem a libero ultrices malesuada. Proin a semper justo. In
+                    non sapien et sapien pulvinar iaculis.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="news-card">
+                <figure>
+                  <img
+                    src="https://picsum.photos/seed/news2/400/250"
+                    alt="News image 2"
+                    width="400"
+                    height="250"
+                  />
+                </figure>
+                <div class="news-content">
+                  <h3>Commitment During the Pandemic</h3>
+                  <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et
+                    quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                    aut fugit.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="news-card">
+                <figure>
+                  <img
+                    src="https://picsum.photos/seed/news3/400/250"
+                    alt="News image 3"
+                    width="400"
+                    height="250"
+                  />
+                </figure>
+                <div class="news-content">
+                  <h3>Product of the Year 2024</h3>
+                  <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti atque
+                    corrupti quos dolores et quas molestias excepturi sint
+                    occaecati cupiditate non provident, similique sunt in culpa
+                    qui officia deserunt mollitia animi, id est laborum et
+                    dolorum fuga.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+
+              <!-- Card 4 -->
+              <article class="news-card">
+                <figure>
+                  <img
+                    src="https://picsum.photos/seed/news4/400/250"
+                    alt="News image 4"
+                    width="400"
+                    height="250"
+                  />
+                </figure>
+                <div class="news-content">
+                  <h3>Sustainability in Focus</h3>
+                  <p>
+                    Quis autem vel eum iure reprehenderit qui in ea voluptate
+                    velit esse quam nihil molestiae consequatur, vel illum qui
+                    dolorem eum fugiat quo voluptas nulla pariatur? Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article class="news-card">
+                <figure>
+                  <img
+                    src="https://picsum.photos/seed/news5/400/250"
+                    alt="News image 5"
+                    width="400"
+                    height="250"
+                  />
+                </figure>
+                <div class="news-content">
+                  <h3>AI and Automation in Boilers</h3>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum. Sed ut perspiciatis
+                    unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+
+              <!-- Card 6 -->
+              <article class="news-card">
+                <figure>
+                  <img
+                    src="https://picsum.photos/seed/news6/400/250"
+                    alt="News image 6"
+                    width="400"
+                    height="250"
+                  />
+                </figure>
+                <div class="news-content">
+                  <h3>Global Expansion Strategy</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                    diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                    Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
+                    augue semper porta.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+            </div>
+            <button class="scroll-arrow scroll-right" aria-label="Scroll right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" class="section-spacing">
+        <header class="section-header">
+          <h2>Products</h2>
+        </header>
+        <div class="container">
+          <!-- Featured Categories -->
+          <section class="featured-categories section-spacing">
+            <header class="subsection-header">
+              <h3>Featured Categories</h3>
+            </header>
+            <div class="category-grid">
+              <div class="category-card">
+                <a href="#">
+                  <figure>
+                    <img
+                      src="assets/images/boilers.png"
+                      alt="Boilers"
+                      width="200"
+                      height="200"
+                    />
+                    <figcaption>
+                      Boilers <i class="fa-solid fa-arrow-right"></i>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="category-card">
+                <a href="#">
+                  <figure>
+                    <img
+                      src="assets/images/burners.png"
+                      alt="Burners"
+                      width="200"
+                      height="200"
+                    />
+                    <figcaption>
+                      Burners <i class="fa-solid fa-arrow-right"></i>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="category-card">
+                <a href="#">
+                  <figure>
+                    <img
+                      src="assets/images/controls.png"
+                      alt="Controls"
+                      width="200"
+                      height="200"
+                    />
+                    <figcaption>
+                      Controls <i class="fa-solid fa-arrow-right"></i>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="category-card">
+                <a href="#">
+                  <figure>
+                    <img
+                      src="assets/images/heat-recovery.png"
+                      alt="Heat Recovery"
+                      width="200"
+                      height="200"
+                    />
+                    <figcaption>
+                      Heat Recovery <i class="fa-solid fa-arrow-right"></i>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="category-card">
+                <a href="#">
+                  <figure>
+                    <img
+                      src="assets/images/water-systems.png"
+                      alt="Water Systems"
+                      width="200"
+                      height="200"
+                    />
+                    <figcaption>
+                      Water Systems <i class="fa-solid fa-arrow-right"></i>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="category-card">
+                <a href="#">
+                  <figure>
+                    <img
+                      src="assets/images/exhaust-solutions.png"
+                      alt="Exhaust Solutions"
+                      width="200"
+                      height="200"
+                    />
+                    <figcaption>
+                      Exhaust Solutions <i class="fa-solid fa-arrow-right"></i>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="category-card">
+                <a href="#">
+                  <figure>
+                    <img
+                      src="assets/images/parts-and-service.png"
+                      alt="Parts & Service"
+                      width="200"
+                      height="200"
+                    />
+                    <figcaption>
+                      Parts & Service <i class="fa-solid fa-arrow-right"></i>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

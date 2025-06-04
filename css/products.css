@@ -1,0 +1,95 @@
+/* === Products section styles === */
+
+/* Styles for the products header with a background image, centered text, and padding */
+#products .section-header {
+  position: relative;
+  background: url("https://picsum.photos/seed/productshero/1200/400")
+    center/cover no-repeat;
+  text-align: center;
+  color: var(--text-inverse);
+  padding: 4rem;
+}
+
+/* Dark overlay on header */
+#products .section-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Header title styling */
+#products .section-header h2 {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Featured categories subsection styles === */
+
+/* Featured categories header*/
+.subsection-header {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Grid layout for featured category cards */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Make the entire card clickable */
+.category-card a {
+  text-decoration: none;
+  display: block;
+}
+
+/* Zoom effect on hover */
+.category-card a:hover figure {
+  transform: scale(1.1);
+}
+
+/* Figure container hover transition */
+.category-card figure {
+  transition: transform 0.3s ease;
+}
+
+/* Product image inside category card */
+.category-card img {
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+/* Caption text below each image */
+.category-card figcaption {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+/* Arrow icon next to caption */
+.category-card figcaption i {
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  /* Reduce padding on small screens */
+  #products .section-header {
+    padding: 3rem;
+  }
+
+  /* Decrease spacing below subsection headings and images */
+  .subsection-header,
+  .category-card img {
+    margin-bottom: 0.5rem;
+  }
+}
