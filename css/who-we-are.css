@@ -49,6 +49,7 @@
   width: 280px;
   max-height: 260px;
   position: relative;
+  z-index: 3;
 }
 
 /* Background image */
