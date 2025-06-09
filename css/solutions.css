@@ -1,7 +1,7 @@
 /* === Solutions section styles === */
 
 /* Section Heading */
-.section-header {
+#solutions .section-header {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2.5rem;
@@ -75,10 +75,10 @@
 }
 
 /* Figure and image layout */
-figure {
+.solution-box figure {
   flex: 1;
 }
-figure img {
+.solution-box figure img {
   width: 100%;
   height: auto;
   display: block;
@@ -105,12 +105,12 @@ figure img {
   }
 
   /* Ensure figure takes full width */
-  figure {
+  .solution-box figure {
     width: 100%;
   }
 
   /* Adjust image size for smaller screens */
-  figure img {
+  .solution-box figure img {
     min-height: 200px;
   }
 }
