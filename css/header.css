@@ -48,11 +48,12 @@
   box-shadow: var(--shadow-primary);
   border-bottom: 0.4rem solid var(--primary-red);
 }
-.main-nav-row .container {
+.main-nav-row > .container {
   display: flex;
   justify-content: space-between;
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
+  position: relative;
 }
 
 /* XNGAGE logo */
@@ -68,12 +69,12 @@
 #main-nav {
   margin-left: 3.2rem;
 }
-#main-nav ul {
+#main-nav > ul {
   display: flex;
   gap: 0.5rem;
   list-style: none;
 }
-#main-nav a {
+#main-nav > ul > li > a {
   display: block;
   position: relative;
   padding: 0.9rem;
@@ -84,7 +85,7 @@
   text-decoration: none;
   z-index: 1;
 }
-#main-nav a::before {
+#main-nav > ul > li > a::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -94,8 +95,116 @@
   transition: transform 0.3s ease;
   z-index: -1;
 }
-#main-nav a:hover::before {
+#main-nav > ul > li > a:hover::before {
   transform: scaleX(1);
+}
+
+/* === Products Menu === */
+
+/* Overlay shown behind the dropdown to darken background */
+.nav-overlay {
+  position: fixed;
+  top: 198px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  display: none;
+}
+
+/* Dropdown panel */
+.products-dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--text-inverse);
+  border-top: 0.4rem solid var(--primary-red);
+  box-shadow: var(--shadow-primary);
+  z-index: 5;
+  display: none;
+}
+
+/* Show dropdown panel and overlay when hovering over products link */
+.menu-item-with-dropdown > a:hover ~ .nav-overlay,
+.menu-item-with-dropdown > a:hover ~ .products-dropdown-panel {
+  display: block;
+}
+
+/* Grid layout for the dropdown contents */
+.products-dropdown-panel > .container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.4fr;
+  gap: 32px;
+  padding-right: 0;
+}
+
+/* Shared group styles inside dropdown */
+.products-dropdown-group {
+  padding: 55px 0;
+}
+
+/* Borders for first two groups */
+.products-dropdown-group:nth-child(1),
+.products-dropdown-group:nth-child(2) {
+  border-right: 1px solid var(--ui-bg-light);
+  padding-right: 32px;
+  margin-right: -1px;
+}
+
+/* heading inside group */
+.products-dropdown-group h4 {
+  font-size: 0.95rem;
+  color: var(--primary-taupe);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Unordered lists for product links */
+.products-dropdown-group ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual product links */
+.products-dropdown-group ul li a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+/*  Last column in the products dropdown */
+.products-dropdown-group:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 0;
+  padding-left: 20px;
+  background-color: var(--ui-bg-light-transparent-50);
+}
+
+/* Heading inside the last column */
+.products-dropdown-group:last-child h5 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--primary-blue);
+}
+
+/* Image inside the last column */
+.products-dropdown-group:last-child img {
+  width: 100%;
+  height: 300px;
+}
+
+/* Link inside the last column */
+.products-dropdown-group:last-child a {
+  display: inline-block;
+  color: var(--primary-taupe);
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* Search box*/
@@ -125,10 +234,10 @@
   #main-nav {
     margin-left: 1rem;
   }
-  #main-nav ul {
+  #main-nav > ul {
     gap: 0.2rem;
   }
-  #main-nav a,
+  #main-nav > ul > li > a,
   .search-box {
     padding: 0.6rem;
     font-size: 0.8rem;
@@ -141,7 +250,7 @@
 /* === Mobile and tablet styles === */
 @media (max-width: 1024px) {
   .utility-nav-row .container,
-  .main-nav-row .container {
+  .main-nav-row > .container {
     padding: 0;
   }
 
@@ -259,30 +368,36 @@
 
   /* Sidebar List Styles */
   #menu-toggle:checked ~ header #utility-nav ul,
-  #menu-toggle:checked ~ header #main-nav ul {
+  #menu-toggle:checked ~ header #main-nav > ul {
     display: flex;
     flex-direction: column;
     margin-right: 0;
     gap: 0;
   }
-  #menu-toggle:checked ~ header #main-nav ul li {
+  #menu-toggle:checked ~ header #main-nav > ul > li {
     border-bottom: 0.1rem solid var(--ui-bg-light);
   }
   #menu-toggle:checked ~ header #utility-nav ul a,
-  #menu-toggle:checked ~ header #main-nav ul a {
+  #menu-toggle:checked ~ header #main-nav > ul > li > a {
     padding: 1.5rem;
   }
 
   /* Right arrow icon on main nav links */
-  #menu-toggle:checked ~ header #main-nav ul li a {
+  #menu-toggle:checked ~ header #main-nav > ul > li > a {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  #menu-toggle:checked ~ header #main-nav ul li a::after {
+  #menu-toggle:checked ~ header #main-nav > ul > li > a::after {
     content: "\f105";
     font-family: "Font Awesome 6 Free";
     font-size: 1.2rem;
+  }
+
+  /* Hide dropdown panel and overlay*/
+  .menu-item-with-dropdown > a:hover ~ .nav-overlay,
+  .menu-item-with-dropdown > a:hover ~ .products-dropdown-panel {
+    display: none;
   }
 }
 
@@ -301,12 +416,12 @@
     padding: 2.4rem;
     font-size: 1.2rem;
   }
-  #menu-toggle:checked ~ header #main-nav ul a {
+  #menu-toggle:checked ~ header #main-nav > ul > li > a {
     padding: 2.4rem;
     font-size: 1.4rem;
   }
   /* Increase arrow icon size */
-  #menu-toggle:checked ~ header #main-nav ul li a::after {
+  #menu-toggle:checked ~ header #main-nav > ul > li > a::after {
     font-size: 1.6rem;
   }
 }

@@ -12,6 +12,7 @@
   /* Supplementary UI Colors */
   --ui-bg-light: #d7d3c7;
   --ui-bg-light-transparent: rgba(215, 211, 199, 0.2);
+  --ui-bg-light-transparent-50: rgba(215, 211, 199, 0.5);
   --ui-blue: #d3dee4;
   --ui-green-teal: #477f80;
   --ui-purple-dark: #53284f;
