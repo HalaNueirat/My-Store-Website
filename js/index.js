@@ -13,3 +13,9 @@ function pauseVideo() {
   pauseBtn.style.display = "none";
   playBtn.style.display = "flex";
 }
+
+
+  document.querySelectorAll('.footer-toggle').forEach(el =>
+    el.onclick = () => el.parentElement.classList.toggle('active')
+  );
+

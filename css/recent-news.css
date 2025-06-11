@@ -1,34 +1,34 @@
 /* === Recent news section styles === */
 
 /* Section Header styling */
-.section-header {
+.news-header {
   margin-bottom: 1rem;
 }
-.section-header h2 {
+.news-header h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 /* Styles and align the label that toggles news visibility */
-.section-header .view-all-wrapper {
+.news-header .view-all-wrapper {
   display: flex;
   justify-content: flex-end;
   margin-right: 0.2rem;
 }
-.section-header .view-label {
+.news-header .view-label {
   font-size: 1rem;
   color: var(--primary-taupe);
   text-decoration: none;
 }
-.section-header .view-label:hover {
+.news-header .view-label:hover {
   color: var(--primary-blue);
 }
-.section-header .view-label i {
+.news-header .view-label i {
   margin-left: 3px;
   transition: transform 0.2s;
 }
-.section-header .view-label:hover i {
+.news-header .view-label:hover i {
   transform: translateX(4px);
 }
 
@@ -38,7 +38,7 @@
 }
 
 /* Scroll arrow buttons */
-.scroll-arrow {
+.news-scroll-wrapper .scroll-arrow {
   position: absolute;
   top: 30%;
   transform: translateY(-50%);
@@ -51,10 +51,10 @@
   z-index: 1;
   font-size: 1rem;
 }
-.scroll-left {
+.news-scroll-wrapper .scroll-left {
   left: -0.5rem;
 }
-.scroll-right {
+.news-scroll-wrapper .scroll-right {
   right: -0.5rem;
 }
 
@@ -78,12 +78,12 @@
 
 /* hide arrows and View All News text when expanded */
 #toggle-news:checked ~ .news-scroll-wrapper .scroll-arrow,
-#toggle-news:checked ~ .section-header .view-label span {
+#toggle-news:checked ~ .news-header .view-label span {
   display: none;
 }
 
 /* Show View Less News text when expanded */
-#toggle-news:checked ~ .section-header .view-label::before {
+#toggle-news:checked ~ .news-header .view-label::before {
   content: attr(data-text);
 }
 
@@ -155,7 +155,7 @@
 
 /* Responsive adjustments for mobile */
 @media (max-width: 600px) {
-  .section-header h2 {
+  .news-header h2 {
     margin-bottom: 1rem;
   }
   .cards-container {

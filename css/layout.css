@@ -20,7 +20,7 @@ body {
 
 /* vertical spacing between sections */
 .section-spacing {
-  padding: 60px 0;
+   margin: 70px 0;
 }
 
 /* Adjust container padding for tablets and small screens */

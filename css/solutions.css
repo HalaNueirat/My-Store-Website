@@ -1,7 +1,7 @@
 /* === Solutions section styles === */
 
 /* Section Heading */
-.section-header {
+#solutions .section-header {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2.5rem;
@@ -40,16 +40,9 @@
 
 /* Underline first 3 characters */
 .solution-content h3 span {
-  position: relative;
-}
-.solution-content h3 span::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--primary-taupe);
+  display: inline-block;
+  border-bottom: 2px solid var(--primary-taupe);
+  padding-bottom: 5px;
 }
 
 /* Subtitle Text */
@@ -75,10 +68,10 @@
 }
 
 /* Figure and image layout */
-figure {
+.solution-box figure {
   flex: 1;
 }
-figure img {
+.solution-box figure img {
   width: 100%;
   height: auto;
   display: block;
@@ -105,12 +98,12 @@ figure img {
   }
 
   /* Ensure figure takes full width */
-  figure {
+  .solution-box figure {
     width: 100%;
   }
 
   /* Adjust image size for smaller screens */
-  figure img {
+  .solution-box figure img {
     min-height: 200px;
   }
 }
